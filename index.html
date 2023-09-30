@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calc101</title>
+    <link rel ="stylesheet" href="assets/style.css">
+    
+</head>
+<body>
+
+<h1 class="header">
+    Calc101
+</h1>
+<p class="header br">The Everything Calculator</p>
+
+<!--For the calculator-->
+<div class="calc-container">
+    <!--screen display-->
+    <div class="screen">
+        <input type ="text" id="screen" readonly placeholder="0">
+    </div>
+
+    <!--calculator buttons-->
+    <div class="keys">
+        <p>
+            <input type="button" value="sin" class="btn btn-sign">
+            <input type="button" value="cos" class="btn btn-sign">
+            <input type="button" value="tan" class="btn btn-sign">
+            <input type="button" value="asin" class="btn btn-sign">
+            <input type="button" value="acos" class="btn btn-sign">
+        </p>
+        <p>
+            <input type="button" value="atan" class="btn btn-sign">
+            <input type="button" value="pi" class="btn btn-sign">
+            <input type="button" value="ln" class="btn btn-sign">
+            <input type="button" value="log" class="btn btn-sign">
+            <input type="button" value="%" class="btn btn-sign">
+        </p>
+        <p>
+            <input type="button" value="^2" class="btn btn-sign">
+            <input type="button" value="^3" class="btn btn-sign">
+            <input type="button" value="sqr" class="btn btn-sign">
+            <input type="button" value="(" class="btn btn-sign">
+            <input type="button" value=")" class="btn btn-sign">
+        </p>
+        <p style="margin-top: 30px;">
+            <input type="button" value="7" class="btn btn-num">
+            <input type="button" value="8" class="btn btn-num">
+            <input type="button" value="9" class="btn btn-num">
+            <input type="button" value="Del" class="btn btn-purple">
+            <input type="button" value="C" class="btn btn-purple">
+        </p>
+        <p>
+            <input type="button" value="4" class="btn btn-num">
+            <input type="button" value="5" class="btn btn-num">
+            <input type="button" value="6" class="btn btn-num">
+            <input type="button" value="x" class="btn btn-opr">
+            <input type="button" value="/" class="btn btn-opr">
+        </p>
+        <p>
+            <input type="button" value="1" class="btn btn-num">
+            <input type="button" value="2" class="btn btn-num">
+            <input type="button" value="3" class="btn btn-num">
+            <input type="button" value="+" class="btn btn-opr">
+            <input type="button" value="-" class="btn btn-opr">
+        </p>
+        <p>
+            <input type="button" value="0" class="btn btn-num">
+            <input type="button" value="." class="btn btn-num">
+            <input type="button" value="Exp" class="btn btn-opr">
+            <input type="button" value="Opn" class="btn btn-opr">
+            <input type="button" value="=" class="btn btn-opr ">
+        </p>
+    </div>
+</div>
+
+<!--For the text and instructions part-->
+<div class="sticky-note ins">
+    <div class="note-header">
+        *** Instructions ***
+    </div>
+    <div class="note-content">
+        The calculator is developed trying to include features of a scientific calculator. However, there are some features useful specifically to engineering students.
+        
+        <br>Check them out using the <i><b>Opn</b></i> button.</br>
+    </div>
+</div>
+
+<div class="sticky-note dev">
+    <div class="note-header">
+        *** About the Developer ***
+    </div>
+    <div class="note-content">
+        The calculator is developed by Aditi Kharel, a 3rd year Electronics Engineering student at Pulchowk Campus.
+        <h4>Top Skills:</h4> 
+        <p>Python, Django, Graphic Design</p>
+    </div>
+</div>
+<script src="assets/style.css"></script>
+</body>
+</html>

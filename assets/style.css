@@ -1,0 +1,183 @@
+body{
+    background-color: #ebc7c7;
+}
+
+.header{
+    font-size: 70px;
+    position: absolute;
+    left: 690px;
+    color: #fc3a3a;
+}
+
+.br{
+    position: absolute;
+    top:100px;
+    font-size: 25px;
+    color: black;
+}
+
+.calc-container{
+    background-color:#f7acdd;
+    width: 300px;
+    height: 500px;
+    text-align: center;
+    border-radius: 10px;
+    border: 5px solid #f04ecd;
+    position: absolute;
+    top: 100px; 
+    left: 250px;
+}
+
+.screen{
+    background-color: #f04ecd;
+    height: 45px;
+    position: relative;
+    display: inline-block;
+    top: 30px;
+    width: 250px;
+    border-radius: 5px;
+}
+
+#screen{
+    position:relative;
+    top:3px;
+    width:239px;
+    height:37px;
+    background-color: #f1f1c8;
+    border:0px;
+    text-align: right;
+    font-size: 1.5rem;
+
+}
+
+.keys{
+    position: relative;
+    top:40px;
+}
+
+.btn{
+    color:#f04ecd;
+    background: #fad0e1;
+    cursor:pointer;
+    width:40px;
+    margin: 2px 2px 2px 4px;
+    font-size: 0.9em;
+    text-align: center;
+    border: none;
+    border-top: 2px solid transparent;
+    padding:3px;
+}
+
+.btn-sign{
+    background:#f2cef9;
+    color: #900190;
+    border-radius: 12px;
+    border-bottom: 2px solid #900190 ;
+    border-top: 2px solid #f2cef9 ;
+
+}
+
+.btn-sign:active{
+    border-top: 2px solid #900190 ;
+    border-bottom: 2px solid #f2cef9 ;
+}
+
+.btn-num{
+    font-size: 1.1em;
+    border-radius:6px;
+    border-bottom: 2px solid #f04ecd;
+    border-top: 2px solid #f2cef9;
+}
+
+.btn-num:active{
+    border-top: 2px solid #f04ecd;
+    border-bottom: 2px solid #f2cef9;
+}
+
+.btn-purple{
+    background: #934393 ;
+    padding:4px;
+    color:white;
+    font-size: 1.1em;
+    border-radius: 4px;
+    border-bottom: 2px solid #f2cef9;
+    border-top: 2px solid #934393;
+    font-weight: 600;
+}
+
+.btn-purple:active{
+    border-top: 2px solid #f2cef9;
+    border-bottom: 2px solid #934393;
+}
+
+.btn-opr{
+    background: #d4e5f9;
+    color: #113f75;
+    border-radius: 5px;
+    border-top: 2px solid #d4e5f9;
+    border-bottom: 2px solid #113f75;
+    padding:4px;
+    font-size: 1.1em;
+}
+
+.btn-opr:active{
+    border-bottom: 2px solid #d4e5f9;
+    border-top: 2px solid #113f75;
+}
+
+.sticky-note {
+    width: 300px;
+    background-color: #f5f5f5;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+    font-size: 12px;
+    animation-name: stickyNoteAnimate;
+    animation-duration: 2s; /* Animation duration */
+    animation-timing-function: ease-in-out; /* Timing function */
+    animation-delay: 0.5s;
+}
+
+@keyframes stickyNoteAnimate {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.ins{
+    position: fixed;
+    top:200px;
+    left:650px;
+
+}
+
+.dev{
+    position: fixed;
+    top:350px;
+    left:650px;
+
+}
+
+
+
+.note-header {
+    background-color: #ffc107;
+    padding: 8px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 20px;
+}
+
+.note-content {
+    padding: 10px;
+}
+
