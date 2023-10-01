@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calc101</title>
     <link rel ="stylesheet" href="assets/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
     
 </head>
 <body>
@@ -12,91 +13,155 @@
 <h1 class="header">
     Calc101
 </h1>
-<p class="header br">The Everything Calculator</p>
+<p class="header br">Not Your Average Calculator</p>
 
 <!--For the calculator-->
-<div class="calc-container">
+<div class="calc-container" id="replaceByOpn">
     <!--screen display-->
     <div class="screen">
-        <input type ="text" id="screen" readonly placeholder="0">
+        <input type ="text" id="cont-screen" readonly placeholder="0">
     </div>
 
     <!--calculator buttons-->
     <div class="keys">
         <p>
-            <input type="button" value="sin" class="btn btn-sign">
-            <input type="button" value="cos" class="btn btn-sign">
-            <input type="button" value="tan" class="btn btn-sign">
-            <input type="button" value="asin" class="btn btn-sign">
-            <input type="button" value="acos" class="btn btn-sign">
+            <input type="button" value="sin" class="btn btn-sign" onclick="sine()">
+            <input type="button" value="cos" class="btn btn-sign" onclick="cosine()">
+            <input type="button" value="tan" class="btn btn-sign" onclick="tan()">
+            <input type="button" value="asin" class="btn btn-sign" onclick="invsine()">
+            <input type="button" value="acos" class="btn btn-sign" onclick="invcosine()">
         </p>
         <p>
-            <input type="button" value="atan" class="btn btn-sign">
-            <input type="button" value="pi" class="btn btn-sign">
-            <input type="button" value="ln" class="btn btn-sign">
-            <input type="button" value="log" class="btn btn-sign">
-            <input type="button" value="%" class="btn btn-sign">
+            <input type="button" value="atan" class="btn btn-sign" onclick="invtan()">
+            <input type="button" value="pi" class="btn btn-sign" onclick="press(Math.PI)">
+            <input type="button" value="ln" class="btn btn-sign" onclick="ln()">
+            <input type="button" value="log" class="btn btn-sign" onclick="log()">
+            <input type="button" value="%" class="btn btn-sign" onclick="press('%')">
         </p>
         <p>
-            <input type="button" value="^2" class="btn btn-sign">
-            <input type="button" value="^3" class="btn btn-sign">
-            <input type="button" value="sqr" class="btn btn-sign">
-            <input type="button" value="(" class="btn btn-sign">
-            <input type="button" value=")" class="btn btn-sign">
+            <input type="button" value="^2" class="btn btn-sign" onclick="square()">
+            <input type="button" value="^3" class="btn btn-sign" onclick="cube()">
+            <input type="button" value="sqr" class="btn btn-sign" onclick="squareRoot()">
+            <input type="button" value="(" class="btn btn-sign" onclick="press('(')">
+            <input type="button" value=")" class="btn btn-sign" onclick="press(')')">
         </p>
         <p style="margin-top: 30px;">
-            <input type="button" value="7" class="btn btn-num">
-            <input type="button" value="8" class="btn btn-num">
-            <input type="button" value="9" class="btn btn-num">
-            <input type="button" value="Del" class="btn btn-purple">
-            <input type="button" value="C" class="btn btn-purple">
+            <input type="button" value="7" class="btn btn-num" onclick="press(7)">
+            <input type="button" value="8" class="btn btn-num" onclick="press(8)">
+            <input type="button" value="9" class="btn btn-num" onclick="press(9)">
+            <input type="button" value="Del" class="btn btn-purple" onclick="deletion()">
+            <input type="button" value="C" class="btn btn-purple" onclick="clearScreen('')">
         </p>
         <p>
-            <input type="button" value="4" class="btn btn-num">
-            <input type="button" value="5" class="btn btn-num">
-            <input type="button" value="6" class="btn btn-num">
-            <input type="button" value="x" class="btn btn-opr">
-            <input type="button" value="/" class="btn btn-opr">
+            <input type="button" value="4" class="btn btn-num" onclick="press(4)">
+            <input type="button" value="5" class="btn btn-num" onclick="press(5)">
+            <input type="button" value="6" class="btn btn-num" onclick="press(6)">
+            <input type="button" value="x" class="btn btn-opr" onclick="press('*')">
+            <input type="button" value="/" class="btn btn-opr" onclick="press('/')">
         </p>
         <p>
-            <input type="button" value="1" class="btn btn-num">
-            <input type="button" value="2" class="btn btn-num">
-            <input type="button" value="3" class="btn btn-num">
-            <input type="button" value="+" class="btn btn-opr">
-            <input type="button" value="-" class="btn btn-opr">
+            <input type="button" value="1" class="btn btn-num" onclick="press(1)">
+            <input type="button" value="2" class="btn btn-num" onclick="press(2)">
+            <input type="button" value="3" class="btn btn-num" onclick="press(3)">
+            <input type="button" value="+" class="btn btn-opr" onclick="press('+')">
+            <input type="button" value="-" class="btn btn-opr" onclick="press('-')">
         </p>
         <p>
-            <input type="button" value="0" class="btn btn-num">
-            <input type="button" value="." class="btn btn-num">
-            <input type="button" value="Exp" class="btn btn-opr">
-            <input type="button" value="Opn" class="btn btn-opr">
-            <input type="button" value="=" class="btn btn-opr ">
+            <input type="button" value="0" class="btn btn-num" onclick="press(0)">
+            <input type="button" value="." class="btn btn-num" onclick="press('.')">
+            <input type="button" value="Exp" class="btn btn-opr" onclick="exponent()" >
+            <input type="button" value="Ans" class="btn btn-opr" onclick="answer()">
+            <input type="button" value="=" class="btn btn-opr " onclick="isEqualTo()">
         </p>
     </div>
 </div>
 
-<!--For the text and instructions part-->
+<div class="opn-container" id="replacement">
+        <!--screen display-->
+        <div class="opn-screen">
+            <input type ="text" id="opn-screen" readonly placeholder="0">
+        </div>
+        <p>
+            <input type="button" value="fix-2" class="btn btn-sign btn-option" onclick="fix(2)">
+            <input type="button" value="fix-3" class="btn btn-sign btn-option" onclick="fix(3)">
+            <input type="button" value="fix-4" class="btn btn-sign btn-option" onclick="fix(4)">
+        </p>
+        <p>
+            <input type="button" value="m to cm" class="btn btn-sign btn-option" onclick="mtocm()">
+            <input type="button" value="cm to m" class="btn btn-sign btn-option" onclick="cmtom()">
+            <input type="button" value="inv" class="btn btn-sign btn-option" onclick="inv()">
+        </p>
+        <p>
+            <input type="button" value="deg to rad" class="btn btn-sign btn-option" style="width:80px;" onclick="degtorad()">
+            <input type="button" value="rad to deg" class="btn btn-sign btn-option" style="width:80px;" onclick="radtodeg()">
+        </p>
+        <p style="margin-top: 70px;">
+            <input type="button" value="7" class="btn btn-num" onclick="press(7)">
+            <input type="button" value="8" class="btn btn-num" onclick="press(8)">
+            <input type="button" value="9" class="btn btn-num" onclick="press(9)">
+            <input type="button" value="Del" class="btn btn-purple" onclick="deletion()">
+        </p>
+        <p>
+            <input type="button" value="4" class="btn btn-num" onclick="press(4)">
+            <input type="button" value="5" class="btn btn-num" onclick="press(5)">
+            <input type="button" value="6" class="btn btn-num" onclick="press(6)">
+            <input type="button" value="C" class="btn btn-purple" onclick="clearScreen('')">
+        </p>
+        <p>
+            <input type="button" value="1" class="btn btn-num" onclick="press(1)">
+            <input type="button" value="2" class="btn btn-num" onclick="press(2)">
+            <input type="button" value="3" class="btn btn-num" onclick="press(3)">
+            <input type="button" value="=" class="btn btn-opr " onclick="isEqualTo()">
+        </p>
+        <p>
+            <input type="button" value="0" class="btn btn-num" onclick="press(0)">
+            <input type="button" value="." class="btn btn-num" onclick="press('.')">
+            <input type="button" value="Home" class="btn btn-opr btn-back" id="BackButton">
+        </p>
+    </div>
+
+
+</div>
+
+<!--For instructions-->
 <div class="sticky-note ins">
     <div class="note-header">
-        *** Instructions ***
+        Instructions 
     </div>
     <div class="note-content">
-        The calculator is developed trying to include features of a scientific calculator. However, there are some features useful specifically to engineering students.
+        The calculator is developed trying to include features of a scientific calculator. Some useful conversion functions are included as well.
         
-        <br>Check them out using the <i><b>Opn</b></i> button.</br>
+        <br>Check them out clicking the <b type ="button" class="btn btn-opr" id="optionsButton">Opn</b> button here.</br>
     </div>
 </div>
-
+<!--For About Dev-->
 <div class="sticky-note dev">
     <div class="note-header">
-        *** About the Developer ***
+        About the Developer
     </div>
     <div class="note-content">
-        The calculator is developed by Aditi Kharel, a 3rd year Electronics Engineering student at Pulchowk Campus.
+        The calculator is developed by <b>Aditi Kharel</b>, a 3rd year Electronics Engineering student at Pulchowk Campus.
         <h4>Top Skills:</h4> 
         <p>Python, Django, Graphic Design</p>
     </div>
 </div>
-<script src="assets/style.css"></script>
+
+<!--Features-->
+<div class="sticky-note feat">
+    <div class="note-header">
+        Extra Features
+    </div>
+    <div class="note-content">
+        The features in the calculator I added on my own:
+        <ul>
+            <li>Can't delete answers</li>
+            <li>Answers cleared when a number is pressed</li>
+            <li>You can click on <b>Ans</b> for further calculations. </li>
+            <li>More useful conversions</li>
+        </ul>
+    </div>
+</div>
+
+<script src="assets/app.js"></script>
 </body>
 </html>
